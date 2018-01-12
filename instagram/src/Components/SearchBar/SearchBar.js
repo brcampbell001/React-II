@@ -16,11 +16,19 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="SearchBar">
-             <div className="SearchBar_icon SearchBar_icon-camera"></div>
-             <div className="SearchBar_logo"></div>
-             <div className="SearchBar_input"></div>
+             <div className="SearchBar__icon SearchBar__icon-camera"></div>
+             <div className="SearchBar__logo"></div>
+             <div className="SearchBar__input"></div>
                 <input type="text" onchange={this.eventInput} value={this.state.input} placeholder="Search" />
             </div>
-        )
+            <div className="SearchBar__iconset">
+                <div className="SearchBar__icon SearchBar__icon-explore" /></div>
+                <div className="SearchBar__icon SearchBar__icon-like" /></div>
+                <div className="SearchBar__icon SearchBar__icon-user" /></div>
+            </div>
+        </div>
+        );
     }
 }
+
+export default SearchBar;
